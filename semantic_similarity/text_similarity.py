@@ -1,3 +1,7 @@
+# requirement -> sentence_transformers==2.2.2
+# reference
+# https://enjoymachinelearning.com/blog/finding-semantic-similarity-between-sentences-in-python/
+
 from sentence_transformers import SentenceTransformer, util
 import time
 
@@ -23,6 +27,3 @@ pt_cosine = util.pytorch_cos_sim(embeddings1, embeddings2)
 t2 = time.time()
 
 print(f"contextual similarity: {cosine_scores}, with time {t2 - t1} seconds")
-
-# reference
-# https://enjoymachinelearning.com/blog/finding-semantic-similarity-between-sentences-in-python/
